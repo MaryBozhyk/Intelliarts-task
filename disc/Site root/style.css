@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg-img.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2 {
+    color: rgba(213,173,109,1);
+    text-shadow: 1px 1px rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Monoton', cursive;
+    word-spacing: 20px;
+}
+
+main,
+h1 {
+    margin: 30px 100px;
+}
+
+menu {
+    display: flex;
+    flex-direction: column;
+}
+
+button,
+form {
+    box-shadow: 1px 1px rgba(0, 0, 0, 1);
+}
+
+button {
+    margin-bottom: 30px;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(243, 226, 199, 1) 0%, rgba(182, 141, 76, 1) 51%, rgba(193, 158, 103, 1) 99%, rgba(233, 212, 179, 1) 100%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(243, 226, 199, 1) 0%, rgba(182, 141, 76, 1) 51%, rgba(193, 158, 103, 1) 99%, rgba(233, 212, 179, 1) 100%);
+}
+
+form,
+#back-layout,
+h3 {
+    display: none;
+}
+
+form,
+button {
+    border: 1px solid rgba(213,173,109,1);
+}
+
+form {
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 550px;
+    min-height: 300px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 5px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(235, 199, 146, 1) 100%);
+}
+
+h2,
+h3,
+table,
+.w-100 {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin: 10px auto;
+    font-family: 'Sofia', cursive;
+}
+
+#back-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.6;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+label {
+    color: rgba(103, 87, 62, 1);
+    font-weight: bold;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-60 label,
+.w-60 input {
+    width: 50%;
+}
+
+input,
+select,
+table,
+th,
+tr,
+td {
+    border: 1px solid rgba(103, 87, 62, 1);
+}
+
+input,
+select {
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+#product-name {
+    width: 70%;
+}
+
+.small-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    margin: 0 30px;
+}
+
+.exit {
+    background: linear-gradient(to bottom, rgba(243, 226, 199, 1) 0%, rgba(87, 74, 55, 1) 50%, rgba(89, 76, 59, 1) 51%, rgba(140, 118, 84, 1) 100%);
+}
+
+.exit:hover {
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(243, 226, 199, 1) 0%, rgba(87, 74, 55, 1) 50%, rgba(89, 76, 59, 1) 51%, rgba(140, 118, 84, 1) 100%);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#all-items,
+#total-calculation {
+    justify-content: center;
+}
+
+.input-column {
+    flex-direction: column;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    margin: 30px;
+}

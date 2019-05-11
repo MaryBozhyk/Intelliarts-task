@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Income manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Sofia" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Income manager</h1> 
+    </header>
+    <main>
+        <menu>
+            <button id="add-purchase" type="button" onclick="changeDisplay('add-item')">Purchase</button>
+            <button id="purchase-list" type="button" onclick="changeDisplay('all-items')">All</button>
+            <button id="detele-purchase" type="button" onclick="changeDisplay('clear-items')">Clear</button>
+            <button id="purchase-sum" type="button" onclick="changeDisplay('calculate-value')">Report</button>
+        </menu>
+        <form name="add-item" id="add-item">
+            <h2>Add new purchase:</h2>
+            <div class="w-60">
+                <label for="purchase-date">Date of purchase:</label>
+                <input id="purchase-date" type="date"> </div>
+            <div class="w-60">
+                <label for="money-amount">Amount of money:</label>
+                <input type="text" id="money-amount" placeholder="Add amount..."> </div>
+            <div class="w-30">
+                <label for="currency">Currency:</label>
+                <select name="" id="currency">
+                    <option value="uah">UAH</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="pln">PLN</option>
+                </select>
+            </div>
+            <div class="w-100">
+                <label for="product-name">Name of product:</label>
+                <input type="text" id="product-name" placeholder="Add name of product..."> </div>
+            <button class="small-btn" id="add" type="button" onclick="adding()">Add</button>
+            <button class="small-btn exit" type="button">Exit</button>
+        </form>
+        <form id="all-items">
+            <h2>The list of purchase:</h2>
+            <table id="dataTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Name</th>
+                </tr>
+            </table>
+            <button class="small-btn exit" type="button">Exit</button>
+        </form>
+        <form id="clear-items">
+            <h2>Choose date of purchase:</h2>
+            <div class="w-100 input-column">
+                <label for="clear-date">Date:</label>
+                <select name="" id="clear-date"> 
+                 <option value="" disabled selected hidden>Please Choose...</option>
+                </select>
+            </div>
+            <button class="small-btn" id="clear" type="button" onclick="clearing()">Clear</button>
+            <button class="small-btn exit" type="button">Exit</button>
+        </form>
+        <form id="calculate-value">
+            <h2>Calculation of total income</h2>
+            <div class="w-30 input-column">
+                <label for="choose-year">Year:</label>
+                <select name="" id="choose-year"> 
+                <option value="" disabled selected hidden>Please Choose...</option>
+                </select>
+            </div>
+            <div class="w-30 input-column">
+                <label for="choose-currency">Currency:</label>
+                <select name="" id="choose-currency"> 
+                <option value="" disabled selected hidden>Please Choose...</option>
+                </select>
+            </div>
+            <h3 id="total-calculation">The total income for year &#160; <span id="choose-year-calc"></span> &#160; is &#160; <span id="choose-year-value"></span> &#160; <span id="choose-currency-show"></span></h3>
+            <button class="small-btn" id="calculate" type="button" onclick="calculation()">Calculate</button>
+            <button class="small-btn exit" type="button">Exit</button>
+        </form>
+    </main>
+    <div id="back-layout"></div>
+    <script src="../Unit tests/jasmine-standalone-3.4.0/src/script.js"></script>
+</body>
+
+</html>
